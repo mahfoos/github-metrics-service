@@ -36,3 +36,15 @@ jobs:
         file: Dockerfile
         push: true
         tags: developeriq.azurecr.io/github-metrics-service:latest
+
+    - name: Set up Kubectl
+      uses: azure/setup-kubectl@v1
+
+    - name: Set up Kubernetes config
+      uses: azure/k8s-set-context@v1
+      with:
+        method: kubeconfig
+        kubeconfig: ${{ secrets.KUBECONFIG }}
+
+    - name: Deploy to Kubernetes
+      run: kubectl apply -f deployment.yml
