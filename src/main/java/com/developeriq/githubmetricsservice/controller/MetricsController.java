@@ -34,4 +34,9 @@ public class MetricsController {
         return githubDataService.getIssuesCount(owner, repo);
     }
 
+    @GetMapping("/test")
+    public String getTest(){
+        return "Tesing docker";
+    }
+
 }
