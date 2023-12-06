@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://developeriq.mysql.database.azure.com/githubmetrics
+    username: developeriq
+    password: 1054vvBB
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+server:
+  port: 8080
+
