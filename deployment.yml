@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: github-metrics-service
-          image: mahfoos/github-metrics-service:v2
+          image: developeriq.azurecr.io/github-metrics-service:latest
           ports:
             - containerPort: 8080
 
