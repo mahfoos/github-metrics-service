@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: github-metrics-service
-          image: developeriq.azurecr.io/github-metrics-service:latest
+          image: developeriq.azurecr.io/github-metrics-service:IMAGE_TAG
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
