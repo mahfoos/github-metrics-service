@@ -44,7 +44,7 @@ public class MetricsController {
     }
 
 
-    @GetMapping("github/metrics/{user}/{repo}")
+    @GetMapping("github/{user}/{repo}")
     public ResponseEntity<?> collectAndSendMetrics(@PathVariable String user, @PathVariable String repo) {
         DeveloperMetrics metrics = new DeveloperMetrics();
         metrics.setUserId(user);

@@ -5,7 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@FeignClient(name = "storage-service", url = "http://10.0.132.138:8081")
+@FeignClient(name = "storage-service", url = "http://4.157.158.246:8081/")
 public interface StorageServiceClient {
 
     @PostMapping("/store/metrics")
