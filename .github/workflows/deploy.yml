@@ -22,9 +22,6 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: Run Tests
-      run: mvn test
-
     - name: Login to Azure Container Registry
       uses: azure/docker-login@v1
       with:

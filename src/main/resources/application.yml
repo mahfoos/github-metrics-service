@@ -3,9 +3,6 @@ spring:
     url: ${DB_URL}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
-#    url: jdbc:mysql://developeriq.mysql.database.azure.com/githubmetrics
-#    username: developeriq
-#    password: 1054vvBB
 
   jpa:
     hibernate:
@@ -21,8 +18,8 @@ server:
 
 test:
   github:
-    owner: mahfoos
-    repo: keploy
-    user: mahfoos
+
+
+
 
 
