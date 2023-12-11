@@ -1,0 +1,27 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: metrics-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: developeriq.com
+      http:
+        paths:
+          - path: /metrics
+            pathType: Prefix
+            backend:
+              service:
+                name: github-metrics-service
+                port:
+                  number: 8080
+    - host: developeriq.com
+      http:
+        paths:
+          - path: /storage
+            pathType: Prefix
+            backend:
+              service:
+                name: data-storage-service
+                port:
+                  number: 8081
