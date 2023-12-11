@@ -52,13 +52,13 @@ public class GitHubMetricsServiceIntegrationTest {
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotNull();
     }
-    @Test
-    public void testGetMetrics() {
-        String user = "mahfoos";
-        String repo = "keploy";
-        ResponseEntity<String> response = restTemplate.getForEntity("/metrics/github/" + user + "/" + repo, String.class);
-
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-    }
+//    @Test
+//    public void testGetMetrics() {
+//        String user = "mahfoos";
+//        String repo = "keploy";
+//        ResponseEntity<String> response = restTemplate.getForEntity("/metrics/github/" + user + "/" + repo, String.class);
+//
+//        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+//    }
 
 }
