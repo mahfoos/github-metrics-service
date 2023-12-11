@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline GitHub Metrics Service
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: Run Integration Tests
+    - name: Run Tests
       run: mvn test
 
     - name: Login to Azure Container Registry
@@ -58,3 +58,5 @@ jobs:
 
     - name: Deploy Ingress Controller
       run: kubectl apply -f ingress-controller.yml
+
+
